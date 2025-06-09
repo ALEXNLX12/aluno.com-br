@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Aluno Helper - Ferramentas Inteligentes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background: #f4f4f9;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      color: #333;
+    }
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 15px auto;
+      max-width: 400px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    button {
+      background: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #45a049;
+    }
+    input {
+      padding: 10px;
+      width: 80%;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Aluno Helper 📚🤖</h1>
+  <p>O seu assistente de estudos com IA e ferramentas úteis!</p>
+
+  <div class="card">
+    <h2>Chat de IA (exemplo)</h2>
+    <input type="text" id="userInput" placeholder="Faça uma pergunta..." />
+    <button onclick="sendMessage()">Enviar</button>
+    <p id="response"></p>
+  </div>
+
+  <div class="card">
+    <h2>Funções Futuras:</h2>
+    <button onclick="alert('Em breve: Gerador de Resumos')">Gerador de Resumos</button><br>
+    <button onclick="alert('Em breve: Calculadora de Médias')">Calculadora de Médias</button><br>
+    <button onclick="alert('Em breve: Bloco de Notas')">Bloco de Notas</button>
+  </div>
+
+  <script>
+    function sendMessage() {
+      const input = document.getElementById('userInput').value;
+      const response = document.getElementById('response');
+      if (input.toLowerCase().includes("resumo")) {
+        response.textContent = "Claro! Cole seu texto e farei um resumo em breve.";
+      } else {
+        response.textContent = "Estou me preparando para responder com IA real!";
+      }
+    }
+  </script>
+</body>
+</html>
